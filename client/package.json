@@ -1,0 +1,11 @@
+{
+	"name": "sample-feature",
+	"title": "sample-feature",
+	"version": "1.0.0",
+	"description": "Sample Feature",
+	"homepage": "",
+	"icon": "",
+	"bundledPlugins": {
+		"sample-plugin": "file:sample-plugin"
+	}
+}

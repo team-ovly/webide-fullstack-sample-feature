@@ -1,0 +1,25 @@
+{
+	"name": "br.com.ovly.webide.feature.sample-feature.plugin-a",
+	"description": "Plugin A",
+	"i18n": "br.com.ovly.webide.feature.sample-feature.plugin-a/i18n/i18n",
+	"module": "plugin-a/Plugin",
+	"requires": {
+		"services": [
+			"log"
+		]
+	},
+	"provides": {
+		"services": {},
+		"interfaces": {}
+	},
+	"configures": {
+		"services": {
+			"log:info": [{
+				"id": "sample-plugin.helloWorld",
+				"label": "{i18n>command_helloWorld}",
+				"service": "sample-plugin/command/HelloWorld"
+			}]
+		}
+	},
+	"subscribes": {}
+}

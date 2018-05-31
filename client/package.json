@@ -7,6 +7,7 @@
 	"homepage": "https://team-ovly.github.io/webide-fullstack-sample-feature/",
 	"icon": "https://ovly.com.br/wp-content/uploads/2018/01/cropped-Ovly-Logo-Color-White-Background.png",
 	"bundledPlugins": {
-		"sample-plugin": "file:sample-plugin"
+		"sample-plugin": "file:sample-plugin",
+		"br.com.ovly.webide.feature.sample-feature.plugin-a": "file:plugin-a"
 	}
 }

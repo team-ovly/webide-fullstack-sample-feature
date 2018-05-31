@@ -5,6 +5,8 @@
 	"module": "plugin-a/Plugin",
 	"requires": {
 		"services": [
+			"command",
+			"commandGroup",
 			"log"
 		]
 	},
@@ -14,10 +16,24 @@
 	},
 	"configures": {
 		"services": {
-			"log:info": [{
-				"id": "sample-plugin.helloWorld",
-				"label": "{i18n>command_helloWorld}",
-				"service": "sample-plugin/command/HelloWorld"
+
+			"commandGroup:groups": [{
+				"id": "tools.ovly",
+				"label": "OVLY"
+			}, {
+				"id": "tools.ovly.plugin-a"
+			}],
+
+			"commandGroup:items": [{
+				"group": "tools.ovly",
+				"parent": "tools",
+				"type": "menu",
+				"prio": 100
+			}, {
+				"group": "tools.sample.plugin-a",
+				"parent": "tools.ovly",
+				"type": "inline",
+				"prio": 10
 			}]
 		}
 	},

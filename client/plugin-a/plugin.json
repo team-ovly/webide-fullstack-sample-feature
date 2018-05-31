@@ -30,7 +30,7 @@
 				"type": "menu",
 				"prio": 100
 			}, {
-				"group": "tools.sample.plugin-a",
+				"group": "tools.ovly.plugin-a",
 				"parent": "tools.ovly",
 				"type": "inline",
 				"prio": 10

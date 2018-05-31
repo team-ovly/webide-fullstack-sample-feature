@@ -34,6 +34,17 @@
 				"parent": "tools.ovly",
 				"type": "inline",
 				"prio": 10
+			}, {
+				"command": "plugin-a.write",
+				"parent": "tools.ovly",
+				"type": "action",
+				"prio": 10
+			}],
+
+			"command:commands": [{
+				"id": "plugin-a.write",
+				"label": "Write in console",
+				"service": "br.com.ovly.webide.feature.sample-feature.plugin-a/command/Write"
 			}]
 		}
 	},

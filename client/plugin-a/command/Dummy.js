@@ -1,7 +1,7 @@
 define({
 
 	execute: function() {
-		alert("Dummy command");
+		// alert("Dummy command");
 	},
 
 	isAvailable: function() {

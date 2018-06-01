@@ -7,12 +7,34 @@
 		"services": [
 			"command",
 			"commandGroup",
-			"log"
+			"content",
+			"deployment",
+			"document",
+			"filesystem.documentProvider",
+			"issues",
+			"log",
+			"neoapp",
+			"perspective",
+			"progress",
+			"projectsetting",
+			"run",
+			"selection",
+			"template",
+			"usernotification",
+			"userpreference",
+			"wizard"
 		]
 	},
 	"provides": {
-		"services": {},
-		"interfaces": {}
+		"services": {
+			"ovlySnippets": {
+				"module": "br.com.ovly.webide.feature.sample-feature.plugin-a/service/Snippet",
+				"implements": "br.com.ovly.webide.feature.sample-feature.plugin-a.service.Snippet"
+			}
+		},
+		"interfaces": {
+			"br.com.ovly.webide.feature.sample-feature.plugin-a.service.Snippet": "br.com.ovly.webide.feature.sample-feature.plugin-a/service/Snippet"
+		}
 	},
 	"configures": {
 		"services": {
@@ -21,7 +43,10 @@
 				"id": "ovly",
 				"label": "OVLY"
 			}, {
-				"id": "ovly.snippets"
+				"id": "ovly.snippets",
+				"label": "Snippets"
+			}, {
+				"id": "ovly.snippets.snippet-a"
 			}],
 
 			"commandGroup:items": [{
@@ -30,6 +55,20 @@
 				"parent": "applicationMenu",
 				"type": "menu",
 				"label": "OVLY",
+				"prio": 99
+			}, {
+				"id": "ovly.commandGroupItem.codeSymbol",
+				"group": "ovly",
+				"parent": "codeSymbol",
+				"type": "menu",
+				"label": "OVLY",
+				"prio": 99
+			}, {
+				"id": "ovly.commandGroupItem.repositorybrowserToolbar",
+				"group": "ovly",
+				"parent": "repositorybrowserToolbar",
+				"type": "menu",
+				"icon": "br.com.ovly.webide.feature.sample-feature.plugin-a/image/logo_16x16.png",
 				"prio": 99
 			}, {
 				"id": "ovly.commandGroupItem.repositoryBrowserContextMenu",
@@ -66,13 +105,15 @@
 			}, {
 				"group": "ovly.snippets",
 				"parent": "ovly",
-				"type": "inline",
-				"prio": 10
+				"type": "menu"
+			}, {
+				"group": "ovly.snippets.snippet-a",
+				"parent": "ovly.snippets",
+				"type": "inline"
 			}, {
 				"command": "snippet.snippet_a",
-				"parent": "ovly.snippets",
-				"type": "action",
-				"prio": 10
+				"parent": "ovly.snippets.snippet-a",
+				"type": "action"
 			}, {
 				"command": "plugin-a.write",
 				"parent": "ovly",

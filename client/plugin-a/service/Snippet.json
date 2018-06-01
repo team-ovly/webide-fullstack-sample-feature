@@ -1,0 +1,24 @@
+{
+	"name": "br.com.ovly.webide.feature.plugin-a.service.Snippet",
+	"description": "Service for inserting code snippets",
+	"methods": {
+		"insert": {
+			"description": "insert snippet",
+			"params": [{
+				"name": "sSnippetId",
+				"type": "string",
+				"description": "Snippet ID"
+			}]
+		}
+	},
+
+	"events": {
+		"snippetInserted": {
+			"params": [{
+				"name": "bResult",
+				"type": "boolean",
+				"description": "Snippet was added?"
+			}]
+		}
+	}
+}

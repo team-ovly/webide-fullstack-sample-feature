@@ -1,0 +1,33 @@
+{
+	"name": "br.com.ovly.webide.feature.sample-feature.templates",
+	"description": "OVLY Templates",
+	"i18n": "br.com.ovly.webide.feature.sample-feature.templates/i18n/i18n",
+	"module": "templates/Plugin",
+	"requires": {
+		"services": [
+			"log",
+			"template"
+		]
+	},
+	"provides": {
+		"services": {},
+		"interfaces": {}
+	},
+	"configures": {
+		"services": {
+			"template:templates": [{
+				"id": "ovly.template.basic",
+				"template": "br.com.ovly.webide.feature.sample-feature.templates/basic",
+				"name": "Basic App",
+				"description": "Minimum viable code",
+				"category": ["ovly"]
+			}],
+			"template:categories": [{
+				"id": "ovly",
+				"name": "OVLY Templates",
+				"description": "Very Cool OVLY Templates"
+			}]
+		}
+	},
+	"subscribes": {}
+}

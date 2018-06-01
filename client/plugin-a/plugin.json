@@ -42,29 +42,26 @@
 				"id": "ovly.commandGroupItem.applicationToolbar",
 				"group": "ovly",
 				"parent": "applicationToolbar",
-				"type": "menu",
 				"label": "OVLY",
+				"type": "menu",
 				"prio": 99
 			}, {
 				"id": "ovly.commandGroupItem.applicationLeftSidebar",
-				"group": "ovly",
 				"parent": "applicationLeftSidebar",
-				"type": "menu",
-				"label": "OVLY",
+				"command": "dummy",
+				"icon": "br.com.ovly.webide.feature.sample-feature.plugin-a/image/logo_32x32.png",
 				"prio": 99
 			}, {
 				"id": "ovly.commandGroupItem.applicationRightSidebar",
-				"group": "ovly",
 				"parent": "applicationRightSidebar",
-				"type": "menu",
-				"label": "OVLY",
+				"command": "dummy",
+				"icon": "br.com.ovly.webide.feature.sample-feature.plugin-a/image/logo_32x32.png",
 				"prio": 99
 			}, {
 				"id": "ovly.commandGroupItem.applicationLowerRightSidebar",
-				"group": "ovly",
 				"parent": "applicationLowerRightSidebar",
-				"type": "menu",
-				"label": "OVLY",
+				"command": "dummy",
+				"icon": "br.com.ovly.webide.feature.sample-feature.plugin-a/image/logo_32x32.png",
 				"prio": 99
 			}, {
 				"group": "ovly.snippets",
@@ -84,6 +81,10 @@
 			}],
 
 			"command:commands": [{
+				"id": "dummy",
+				"label": "Dummy",
+				"service": "br.com.ovly.webide.feature.sample-feature.plugin-a/command/Dummy"
+			}, {
 				"id": "snippet.snippet_a",
 				"label": "Snippet A",
 				"service": "br.com.ovly.webide.feature.sample-feature.plugin-a/command/Snippet_A"

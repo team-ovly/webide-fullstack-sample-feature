@@ -18,30 +18,76 @@
 		"services": {
 
 			"commandGroup:groups": [{
-				"id": "tools.ovly",
+				"id": "ovly",
 				"label": "OVLY"
 			}, {
-				"id": "tools.ovly.plugin-a"
+				"id": "ovly.snippets"
 			}],
 
 			"commandGroup:items": [{
-				"group": "tools.ovly",
-				"parent": "tools",
+				"id": "ovly.commandGroupItem.applicationMenu",
+				"group": "ovly",
+				"parent": "applicationMenu",
 				"type": "menu",
-				"prio": 100
+				"label": "OVLY",
+				"prio": 99
 			}, {
-				"group": "tools.ovly.plugin-a",
-				"parent": "tools.ovly",
+				"id": "ovly.commandGroupItem.repositoryBrowserContextMenu",
+				"group": "ovly",
+				"parent": "repositoryBrowserContextMenu",
+				"type": "menu",
+				"label": "OVLY",
+				"prio": 99
+			}, {
+				"id": "ovly.commandGroupItem.applicationToolbar",
+				"group": "ovly",
+				"parent": "applicationToolbar",
+				"type": "menu",
+				"label": "OVLY",
+				"prio": 99
+			}, {
+				"id": "ovly.commandGroupItem.applicationLeftSidebar",
+				"group": "ovly",
+				"parent": "applicationLeftSidebar",
+				"type": "menu",
+				"label": "OVLY",
+				"prio": 99
+			}, {
+				"id": "ovly.commandGroupItem.applicationRightSidebar",
+				"group": "ovly",
+				"parent": "applicationRightSidebar",
+				"type": "menu",
+				"label": "OVLY",
+				"prio": 99
+			}, {
+				"id": "ovly.commandGroupItem.applicationLowerRightSidebar",
+				"group": "ovly",
+				"parent": "applicationLowerRightSidebar",
+				"type": "menu",
+				"label": "OVLY",
+				"prio": 99
+			}, {
+				"group": "ovly.snippets",
+				"parent": "ovly",
 				"type": "inline",
 				"prio": 10
 			}, {
+				"command": "snippet.snippet_a",
+				"parent": "ovly.snippets",
+				"type": "action",
+				"prio": 10
+			}, {
 				"command": "plugin-a.write",
-				"parent": "tools.ovly",
+				"parent": "ovly",
 				"type": "action",
 				"prio": 10
 			}],
 
 			"command:commands": [{
+				"id": "snippet.snippet_a",
+				"label": "Snippet A",
+				"service": "br.com.ovly.webide.feature.sample-feature.plugin-a/command/Snippet_A"
+			}, {
 				"id": "plugin-a.write",
 				"label": "Write in console",
 				"service": "br.com.ovly.webide.feature.sample-feature.plugin-a/command/Write"
